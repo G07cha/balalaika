@@ -1,0 +1,85 @@
+html, body {
+	overflow: hidden;
+}
+
+* {
+	cursor: default;
+}
+
+.head {
+	position: absolute;
+	left: 46%;
+	top: 10%;
+	width: 8%;
+	height: 15%;
+	background: #D4BE6A;
+}
+
+.fingerboard {
+	position: absolute;
+	left: 47.5%;
+	top: 20%;
+	width: 5%;
+	height: 60%;
+	background: #D4BE6A;
+}
+
+.body {
+	left: 20%;
+	bottom: 10%;
+	position: absolute;
+	width: 30%;
+	height: 0;
+	padding-left: 30%;
+	padding-bottom: 30%;
+	overflow: hidden;
+}
+
+.body:after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	margin-left: -500px;
+	border-left: 500px solid transparent;
+	border-right: 500px solid transparent;
+	border-bottom: 700px solid #D4BE6A;
+}
+
+.circle {
+	position: absolute;
+	left: 44%;
+	bottom: 18%;
+	background: #D5A848;
+	border-radius: 50%;
+	width: 12%;
+	height: 15%;
+}
+
+.string {
+	width: 1%;
+	height: 70%;
+	bottom: 15%;
+	position: absolute;
+	background-color: black;
+}
+
+.blurred {
+	-webkit-filter: blur(1px);
+	-moz-filter: blur(1px);
+	-ms-filter: blur(1px);
+	-o-filter: blur(1px);
+	filter: blur(1px);
+}
+
+#\31 {
+	left: 48%;
+}
+
+#\32 {
+	left: 49.5%;
+}
+
+#\33 {
+	left: 51%;
+}
