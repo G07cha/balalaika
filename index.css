@@ -68,12 +68,12 @@ html, body {
 
 .circle {
 	position: absolute;
-	left: 44%;
+	left: 45%;
 	bottom: 18%;
 	background: #D5A848;
 	border-radius: 50%;
-	width: 12%;
-	height: 15%;
+	width: 10%;
+	height: 13%;
 }
 
 .string {
