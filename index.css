@@ -2,7 +2,21 @@ html, body {
 	overflow: hidden;
 }
 
-balalaika * {
+.balalaika {
+	position: relative;
+	width: 1280px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 30px;
+}
+.balalaika:before {
+	margin-top: 80%;
+	content: '.';
+	font-size: 0;
+	display: inline-block;
+}
+
+.balalaika * {
 	cursor: default;
 	-webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -31,7 +45,7 @@ balalaika * {
 }
 
 .body {
-	left: 20%;
+	left: 22%;
 	bottom: 10%;
 	position: absolute;
 	width: 30%;
