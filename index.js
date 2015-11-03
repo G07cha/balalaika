@@ -3,9 +3,25 @@ var isPlaying = false;
 var isClicked = false;
 const timeout = 300;
 
-window.onload = function() {
-	audio = document.getElementById("audio");
-}
+$(document).ready(function() {
+	audio = $('audio')[0];
+	
+	$('.string').on('click', function() {
+		blurString(this);
+	});
+	
+	$(document).on('swipe', function(event) {
+		var start = event.swipestart.coords;
+		var stop = event.swipestop.coords;
+		
+		$('.string').each(function(index, string) {
+			var offset = $(string).offset();
+			if(start[0] < offset.left && stop[0] >= offset.left) {
+				blurString(string);
+			}
+		});
+	});
+});
 
 function playSegment() {
 	if(!isPlaying) {
@@ -28,14 +44,12 @@ function playSegment() {
 	}
 }
 
-function blurString(number) {
-	var string = document.getElementById(number.toString());
-	
-	string.className += " blurred";
+function blurString(string) {
+	$(string).addClass('blurred');
 	
 	playSegment();
 	
 	setTimeout(function() {
-		string.className = "string";
-	}, timeout + 100);
+		$(string).removeClass('blurred');
+	}, timeout + 100); // Look more realistic with additional timeout
 }
