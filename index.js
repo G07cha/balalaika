@@ -45,11 +45,12 @@ function playSegment() {
 }
 
 function blurString(string) {
-	$(string).addClass('blurred');
+	$(string).addClass('tb-blur');
+	$(string).addClass('blur-1x');
 	
 	playSegment();
 	
 	setTimeout(function() {
-		$(string).removeClass('blurred');
+		$(string).removeClass('tb-blur blur-1x');
 	}, timeout + 100); // Look more realistic with additional timeout
 }
