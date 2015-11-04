@@ -95,3 +95,15 @@ html, body {
 #\33 {
 	left: 51%;
 }
+
+.bottomBar {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.fa {
+	text-decoration: none;
+	color: black;
+	margin: 10px;
+}
