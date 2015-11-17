@@ -107,3 +107,9 @@ html, body {
 	color: black;
 	margin: 10px;
 }
+
+.loading {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+}

@@ -1,11 +1,14 @@
-var audio = {};
 var isPlaying = false;
 var isClicked = false;
 const timeout = 300;
 
-$(document).ready(function() {
-	audio = $('audio')[0];
-	
+$(window).load(function() {
+    $('.loading').fadeOut(1000);
+    
+    setTimeout(function() {
+        $('.balalaika').show();
+    }, 1000);
+    
 	$('.string').on('click', function() {
 		blurString(this);
 	});
@@ -27,13 +30,13 @@ function playSegment() {
 	if(!isPlaying) {
 		isPlaying = true;
 		
-		audio.play();
+        $('audio').trigger("play");
 		
 		setTimeout(function() {
 			isPlaying = false;
 			
 			if(!isClicked) {
-				audio.pause();
+                $('audio').trigger("pause");
 			} else {
 				isClicked = false;
 				playSegment();
